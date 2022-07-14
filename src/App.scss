@@ -1,0 +1,14 @@
+$main-dark: #DB38E8;
+$main-normal: #ED9BF4;
+$main-light: #F2BCF6;
+$shadow: 1px 1px 10px 3px darken($main-light, 20%);
+$default-border: 1px solid darken($main-light, 35%);
+
+.Toolbar {
+    display: flex;
+    border: $default-border;
+    box-shadow: $shadow;
+    background-color: #DB38E8;
+    padding: 0.5rem;
+    justify-content: space-between;
+}

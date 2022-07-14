@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import {FaFire} from 'react-icons/fa'
+import {ImEnlarge2} from 'react-icons/im'
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Toolbar/>
+        <br></br>
+        <br></br>
+        <br></br>
+        <Editor/>
+        <Preview/>
+      </div>
+    );
+  }
+}
+
+const Toolbar = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='Toolbar'>
+      <FaFire/>
+      <span>Toolbar</span>
+      <ImEnlarge2/>
     </div>
-  );
+  )
+}
+
+const Editor = () => {
+  return (
+    <div className='Editor'>
+      Editor
+    </div>
+  )
+}
+
+const Preview = () => {
+  return (
+    <div className='Preview'>Preview</div>
+  )
 }
 
 export default App;
