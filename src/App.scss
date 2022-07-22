@@ -4,11 +4,103 @@ $main-light: #F2BCF6;
 $shadow: 1px 1px 10px 3px darken($main-light, 20%);
 $default-border: 1px solid darken($main-light, 35%);
 
+.editor {
+    width: 30rem;
+    margin: 0 auto;
+    .Toolbar {
+        width: 30rem;
+    }
+    textarea {
+        width: 30rem;
+        padding: 0.5rem;
+        background-color: $main-light;
+        height: 20rem;
+    }
+    &.Max {
+        textarea {
+            height: 40rem;
+        }
+    }
+}
+
+.preview {
+    border: $default-border;
+    box-shadow: $shadow;
+    width: 60rem;
+    margin: 0 auto;
+}
 .Toolbar {
     display: flex;
     border: $default-border;
     box-shadow: $shadow;
-    background-color: #DB38E8;
+    background-color: $main-dark;
     padding: 0.5rem;
     justify-content: space-between;
 }
+
+.hide {
+    display: none;
+}
+.fa-down-left-and-up-right-to-center, 
+.fa-up-right-and-down-left-from-center {
+    &:hover {
+        color: lighten($main-dark, $amount: 30%);
+    }
+}
+
+// MARKDOWN STYLES
+#preview {
+    padding: 0 1rem;
+  
+    blockquote {
+      border-left: 3px solid #224b4b;
+      color: #224b4b;
+      padding-left: 5px;
+      margin-left: 25px;
+    }
+  
+    > p > code {
+      padding: 3px;
+    }
+  
+    code {
+      background: white;
+      font-size: 0.875rem;
+      font-weight: bold;
+    }
+  
+    pre {
+      display: block;
+      overflow: auto;
+      background: white;
+      padding: 5px;
+      line-height: 1.2;
+    }
+  
+    h1 {
+      border-bottom: 2px solid black;
+    }
+  
+    h2 {
+      border-bottom: 1px solid black;
+    }
+  
+    table {
+      border-collapse: collapse;
+    }
+  
+    td,
+    th {
+      border: 2px solid black;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  
+    img {
+      display: block;
+      max-width: 90%;
+      margin: 2rem auto;
+    }
+  }
+
+  
